@@ -1,0 +1,278 @@
+.button {
+  position: absolute;
+  width: 17%;
+  height: 17%;
+  display: block;
+  opacity: 0.8;
+  margin: auto auto;
+  background-color: gray;
+  color: white;
+  font-size: 27px;
+  font-weight: bold;
+  opacity: 0.9;
+  -webkit-text-stroke: 1px #000;
+  border: 1px solid white;
+  /* text-stroke: 1px #000; */
+}
+
+.button:hover {
+  opacity: 1;
+  font-size: 30px;
+}
+
+#videoBox {
+  position: relative;
+  display: none;
+  width: 200px;
+  height: 150px;
+  top: 0%;
+  left: 0%;
+  z-index: 2;
+}
+
+#videoBox #videoMain {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: auto auto;
+  background-color: gray;
+  color: white;
+  top: 0%;
+  left: 0%;
+  z-index: 1;
+}
+
+#videoBox #captionMain {
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  width: 30%;
+  height: 20%;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  top: 80%;
+  left: 70%;
+  z-index: 2;
+}
+
+#yuzuVideo {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  padding: 0 auto;
+  text-align: center;
+  display: none;
+}
+
+#showcase {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+
+.holder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#override {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.9;
+}
+
+#ready {
+  width: 30%;
+  height: 30%;
+  top: 35%;
+  left: 35%;
+}
+
+#start {
+  width: 30%;
+  height: 30%;
+  top: 35%;
+  left: 35%;
+}
+
+#post {
+  top: 5.5%;
+  left: 5.5%;
+  background-image: url('../../assets/thumbnail/post.png');
+  background-size: cover;
+}
+
+#gate {
+  top: 5.5%;
+  left: 23.5%;
+  background-image: url( "../../assets/thumbnail/gate.png");
+  background-size: cover;
+}
+
+#corridor {
+  top: 5.5%;
+  left: 41.5%;
+  background-image: url( "../../assets/thumbnail/corridor.png");
+  background-size: cover;
+}
+
+#classroom {
+  top: 5.5%;
+  left: 59.5%;
+  background-image: url( "../../assets/thumbnail/classroom.png");
+  background-size: cover;
+}
+
+#entrance {
+  top: 5.5%;
+  left: 77.5%;
+  background-image: url( "../../assets/thumbnail/entrance.png");
+  background-size: cover;
+}
+
+#bar {
+  top: 23.5%;
+  left: 5.5%;
+  background-image: url( "../../assets/thumbnail/bar.png");
+  background-size: cover;
+}
+
+#intersection {
+  top: 23.5%;
+  left: 23.5%;
+  background-image: url( "../../assets/thumbnail/intersection.png");
+  background-size: cover;
+}
+
+#phonebox {
+  top: 23.5%;
+  left: 41.5%;
+  background-image: url( "../../assets/thumbnail/phonebox.png");
+  background-size: cover;
+}
+
+#well {
+  top: 23.5%;
+  left: 59.5%;
+  background-image: url( "../../assets/thumbnail/well.png");
+  background-size: cover;
+}
+
+#train {
+  top: 23.5%;
+  left: 77.5%;
+  background-image: url( "../../assets/thumbnail/train.png");
+  background-size: cover;
+}
+
+#observatory {
+  top: 41.5%;
+  left: 5.5%;
+  background-image: url( "../../assets/thumbnail/observatory.png");
+  background-size: cover;
+}
+
+#cafe1 {
+  top: 41.5%;
+  left: 23.5%;
+  background-image: url( "../../assets/thumbnail/cafe1.png");
+  background-size: cover;
+}
+
+#yuzu {
+  top: 41.5%;
+  left: 41.5%;
+  background-image: url( "../../assets/thumbnail/yuzu.png");
+  background-size: cover;
+}
+
+#barber {
+  top: 41.5%;
+  left: 59.5%;
+  background-image: url( "../../assets/thumbnail/barber.png");
+  background-size: cover;
+}
+
+#museum {
+  top: 41.5%;
+  left: 77.5%;
+  background-image: url( "../../assets/thumbnail/museum.png");
+  background-size: cover;
+}
+
+#candy {
+  top: 59.5%;
+  left: 5.5%;
+  background-image: url( "../../assets/thumbnail/candy.png");
+  background-size: cover;
+}
+
+#craft {
+  top: 59.5%;
+  left: 23.5%;
+  background-image: url( "../../assets/thumbnail/craft.png");
+  background-size: cover;
+}
+
+#tofu {
+  top: 59.5%;
+  left: 41.5%;
+  background-image: url( "../../assets/thumbnail/tofu.png");
+  background-size: cover;
+}
+
+#festival {
+  top: 59.5%;
+  left: 59.5%;
+  background-image: url( "../../assets/thumbnail/festival.png");
+  background-size: cover;
+}
+
+#best10 {
+  top: 59.5%;
+  left: 77.5%;
+  background-image: url( "../../assets/thumbnail/best10.png");
+  background-size: cover;
+}
+
+#wanage {
+  top: 77.5%;
+  left: 5.5%;
+  background-image: url( "../../assets/thumbnail/wanage.png");
+  background-size: cover;
+}
+
+#alley {
+  top: 77.5%;
+  left: 23.5%;
+  background-image: url( "../../assets/thumbnail/alley.png");
+  background-size: cover;
+}
+
+#photograph {
+  top: 77.5%;
+  left: 41.5%;
+  background-image: url( "../../assets/thumbnail/photograph.png");
+  background-size: cover;
+}
+
+#record {
+  top: 77.5%;
+  left: 59.5%;
+  background-image: url( "../../assets/thumbnail/record.png");
+  background-size: cover;
+}
+
+#cafe2 {
+  top: 77.5%;
+  left: 77.5%;
+  background-image: url( "../../assets/thumbnail/cafe2.png");
+  background-size: cover;
+}

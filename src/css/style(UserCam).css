@@ -1,0 +1,129 @@
+.backgroundCaputure {
+  background-color: gray;
+  padding: 1%;
+  text-align: center;
+  border-radius: 2%;
+}
+
+#start {
+  color: blue;
+  border-color: blue;
+  background-color: white;
+  border-radius: 15%;
+  width: 155px;
+  height: 40px;
+}
+#start:hover {
+  color: white;
+  background-color: blue;
+}
+
+#stop {
+  color: red;
+  border-color: red;
+  background-color: white;
+  border-radius: 15%;
+  width: 150px;
+  height: 40px;
+}
+#stop:hover {
+  color: white;
+  background-color: red;
+}
+
+
+
+.backgroundVideo{
+  background-color: gray;
+  padding: 2%;
+  width: 400px;
+  height: 400px;
+  border-radius: 10%;
+}
+
+#videoBox1 {
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 200px;
+  z-index: 0;
+}
+
+#videoBox1 #videoSub {
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  margin: auto auto;
+  background-color: gray;
+  color: white;
+  top: 0%;
+  left: 0%;;
+  z-index: 1;
+}
+
+#videoBox1 #captionSub {
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  width: 27%;
+  height: 18%;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  top: 93%;
+  left: 73%;
+  z-index: 2;
+}
+
+#control {
+  position:absolute;
+  margin-top: 40px;
+  background-color: white;
+  width: 300px;
+  height: 95px;
+}
+
+#control .recordStart {
+  position: relative;
+  top: 10%;
+  left: 10%;
+  color: blue;
+  border-color: blue;
+  background-color: white;
+  border-radius: 10%;
+  width: 80px;
+  height: 40px;
+}
+#control .recordStart:hover {
+  color: white;
+  background-color: blue;
+}
+
+#control .recordEnd {
+  position: relative;
+  top: 10%;
+  left: 30%;
+  color: red;
+  border-color: red;
+  background-color: white;
+  border-radius: 10%;
+  width: 80px;
+  height: 40px;
+}
+#control .recordEnd:hover {
+  color: white;
+  background-color: red;
+}
+
+#control #stateBox {
+  position: relative;
+  margin-top: 5px;
+  padding: 5%;
+  color: black;
+}
+
+.cap {
+  background-color: white;
+}

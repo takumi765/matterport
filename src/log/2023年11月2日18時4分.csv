@@ -1,0 +1,3 @@
+type,pattern,area,condition,startTime,moveCnt,missCnt,yawCon,pitchCon,yawGyro,pitchGyro,totalYaw,totalPitch
+一対比較法,1,1,視聴触嗅,5.483秒,1,1,0,0,0,0,0,0
+一対比較法,1,1,視聴触嗅,12.710秒,2,3,130,0,3.7847900390624885,0.9613037109375016,133.7847900390625,0.9613037109375016

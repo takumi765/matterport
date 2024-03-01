@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ユーザカメラ</title>
+    <link rel="stylesheet" href="../css/style(UserCam).css">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body style="margin: 5%; background-color: rgb(202, 202, 202);">
+    <div class="row">
+        <!-- <div class="col">
+            <div class="backgroundCaputure">
+                <h3 style="background-color: wheat;">ユーザが見ている画面</h3>
+                <p>
+                    <button id="start">表示画面の選択する</button>&nbsp;
+                    <button id="stop">画面表示を終了する</button>
+                </p>
+                <video id="video" autoplay width="800" height="400" style="object-fit: contain;"></video>
+                <br>
+            </div>
+        </div> -->
+        <div class="col" style="margin: 2%;">
+            <div class="backgroundVideo">
+                <div id="videoBox1">
+                    <video id="videoSub"></video>
+                    <div id="captionSub">ユーザ</div>
+                </div>
+                <div id="control">
+                    <button class="recordStart" onClick="beginRecorde()">録画開始</button>
+                    <button class="recordEnd" onClick="endRecorde()">録画終了</button>
+                    <div id="stateBox">
+                        状態：<a id="state">カメラが見つかりません</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const videoSub = document.getElementById("videoSub");
+    const myPlayer = document.getElementById('myPlayer');
+    const state    = document.getElementById('state');
+
+    // カメラ起動
+    state.innerText = "カメラ起動中";
+    navigator.mediaDevices.getUserMedia({
+        video: {
+            deviceId: "e940449813846bd929c3aa79fa1216d0dfee630557e5c38d46f54365517faf2b",
+        },
+        audio: false,
+    }).then(stream => {
+        videoSub.srcObject       = stream;
+        videoSub.style.transform = "scaleX(-1)";
+        videoSub.play();
+    }).catch(error => {
+        console.log("Web Camera Error:"+ error);
+        return;
+    })
+
+    //========== Recorder ==========//
+    // var recorder = null;
+    // var chunks = [];
+    // function beginRecorde(){
+    //     if(!videoSub.srcObject) return;
+    //     if(recorder) return;
+        
+    //     recorder = new MediaRecorder(videoSub.srcObject, {
+    //         audioBitsPerSecond : 64000,
+    //         videoBitsPerSecond : 512000,
+    //         mimeType : 'video/webm; codecs=vp9'
+    //     });
+    //     chunks = [];
+    //     state.innerText = "録画開始";
+    //     recorder.ondataavailable = function(e){
+    //         chunks.push(e.data);
+    //     };
+    //     recorder.onstop = function(e){
+    //         recorder = null;
+    //         startDownload();
+    //     };
+    //     recorder.start(1000);
+    // };
+    
+    // function endRecorde(){
+    //     if(recorder) recorder.stop();
+    // };
+    
+    // //========== Downloader ==========//
+    // var blobUrl = null;
+    // function startDownload(){
+    //     const recodeDate = getDate();
+    //     if(!blobUrl){
+    //         window.URL.revokeObjectURL(blobUrl);
+    //         blobUrl = null;
+    //     };
+    //     var videoBlob = new Blob(chunks, { type : "video/webm" });
+    //     console.log(videoBlob);
+    //     blobUrl = window.URL.createObjectURL(videoBlob);
+    //     console.log(blobUrl);
+    //     // ビデオをダウンロードする（Blob→mp4）
+    //     /* dawnload先を変更する */
+    //     if(blobUrl){
+    //         const a = document.createElement("a");
+    //         document.body.appendChild(a);
+    //         state.innerText = 'ダウンロードします';
+    //         a.download = 'ユーザ表情録画'+recodeDate+'.mp4';
+    //         a.href = blobUrl;
+    //         a.click();
+    //         a.remove();
+    //         URL.revokeObjectURL(blobUrl);
+    //         state.innerText = 'ダウンロード完了';
+    //     };
+    // };
+
+    // /* 日付を取得する関数 */
+    // function getDate(){
+    //     const now = new Date();
+    //     const year = now.getFullYear();
+    //     const month = now.getMonth();
+    //     const date = now.getDate();
+    //     const hour = now.getHours();
+    //     const minute = now.getMinutes();
+
+    //     const recodeDate = year+'/'+month+'/'+date+'/'+hour+'/'+minute;
+
+    //     return recodeDate;
+    // }
+
+
+
+    // // 画面キャプチャ
+    // const videoElem = document.getElementById("video");
+    // const startElem = document.getElementById("start");
+    // const stopElem = document.getElementById("stop");
+
+    // // Options for getDisplayMedia()
+    // var displayMediaOptions = {
+    //     video: {
+    //         cursor: "always"
+    //     },
+    //     audio: false
+    // };
+
+    // // Set event listeners for the start and stop buttons
+    // startElem.addEventListener("click", function (evt) {
+    //     startCapture();
+    // }, false);
+
+    // stopElem.addEventListener("click", function (evt) {
+    //     stopCapture();
+    // }, false);
+
+    // async function startCapture() {
+    //     try {
+    //         videoElem.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    //     } catch (err) {
+    //         console.error("Error: " + err);
+    //     }
+    // }
+
+    // function stopCapture(evt) {
+    //     let tracks = videoElem.srcObject.getTracks();
+
+    //     tracks.forEach(track => track.stop());
+    //     videoElem.srcObject = null;
+    // }
+</script>
+</html>

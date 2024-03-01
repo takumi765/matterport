@@ -1,0 +1,56 @@
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <!-- CSSファイルを読み込んでいる -->
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+
+<body>
+  <div class="holder">
+    <!-- 別ページにあるみろくの里(srcで指定)をサイズを指定してそのページに表示させる -->
+    <iframe id="showcase" src="/bundle/showcase.html?m=g4TX1yyxm93&play=1&qs=1&log=0&wmode=transparent"
+      frameborder="”0”" allow="xr-spatial-tracking" allowfullscreen></iframe>
+      
+    <div id="override"></div>
+    <!-- video part -->
+    <div id="videoBox">
+      <video id="videoMain"></video>
+      <div id="captionMain">支援者</div>
+    </div>
+    
+    <button type="button" class="button" id="ready" disabled>システム起動中</button>
+    
+    <!-- <button type="button" id="s-button">Start in Auto Move mode</button> -->
+    <button type="button" class="button" id="start"        style="display: none;">START</button>
+    <!-- <button type="button" class="button" id="post"        style="display: none;">郵便局前</button>
+    <button type="button" class="button" id="gate"        style="display: none;">校門・二宮金次郎像前</button>
+    <button type="button" class="button" id="corridor"    style="display: none;">小学校・廊下</button>
+    <button type="button" class="button" id="classroom"   style="display: none;">小学校・教室</button>
+    <button type="button" class="button" id="entrance"    style="display: none;">昭和の街並み・入口</button>
+    <button type="button" class="button" id="bar"         style="display: none;">バーモナコ・入口</button>
+    <button type="button" class="button" id="intersection"style="display: none;">交差点</button>
+    <button type="button" class="button" id="phonebox"    style="display: none;">電話ボックス&<br>かき氷売り自転車</button>
+    <button type="button" class="button" id="well"        style="display: none;">井戸</button>
+    <button type="button" class="button" id="train"       style="display: none;">電車</button>
+    <button type="button" class="button" id="observatory" style="display: none;">展望台</button>
+    <button type="button" class="button" id="cafe1"       style="display: none;">喫茶店</button>
+    <button type="button" class="button" id="yuzu"        style="display: none;">柚子</button>
+    <button type="button" class="button" id="barber"      style="display: none;">散髪屋</button>
+    <button type="button" class="button" id="museum"      style="display: none;">電話博物館</button>
+    <button type="button" class="button" id="candy"       style="display: none;">駄菓子屋・電気屋</button>
+    <button type="button" class="button" id="craft"       style="display: none;">民芸品店</button>
+    <button type="button" class="button" id="tofu"        style="display: none;">とうふや</button>
+    <button type="button" class="button" id="festival"    style="display: none;">お祭り広場<br>入り口</button>
+    <button type="button" class="button" id="best10"      style="display: none;">ザ・ベストテン</button>
+    <button type="button" class="button" id="wanage"      style="display: none;">縁日・わなげ</button>
+    <button type="button" class="button" id="alley"       style="display: none;">路地裏</button>
+    <button type="button" class="button" id="photograph"  style="display: none;">映画とらさん<br>撮影風景</button>
+    <button type="button" class="button" id="record"      style="display: none;">レコード</button>
+    <button type="button" class="button" id="cafe2"       style="display: none;">喫茶店（地下）</button> -->
+    <img id="yuzuVideo" src="../../assets/yuzu.gif" width="100%" height="100%">
+  </div>
+</body>
